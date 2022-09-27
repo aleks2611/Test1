@@ -1,5 +1,8 @@
+import loops.ForLoops;
+
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello world!");
+        ForLoops forloop = new ForLoops();
+        forloop.testForm();
     }
 }
