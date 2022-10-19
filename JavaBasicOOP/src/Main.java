@@ -1,8 +1,11 @@
 import loops.ForLoops;
+import test.All;
 
 public class Main {
     public static void main(String[] args) {
-        ForLoops forloop = new ForLoops();
-        forloop.testForm();
+        All all = new All();
+        all.allOne();
+        all.increment();
     }
+
 }
