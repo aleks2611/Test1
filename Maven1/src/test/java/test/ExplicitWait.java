@@ -18,10 +18,11 @@ public class ExplicitWait {
 
     public WebElement waitForElement(By locator, int timeout) {
         WebElement element = null;
+
         try {
             System.out.println("Waiting for max::" + timeout + "seconds for element be available");
-            WebDriverWait wait = new WebDriverWait(driver, timeout);
-            element=wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
+            WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(timeout));
+            element = wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
 
 
         } catch (Exception e) {

@@ -1,12 +1,12 @@
 package test;
 
-import org.junit.After;
-import org.junit.Before;
-import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Test;
 
 import java.util.concurrent.TimeUnit;
 
@@ -15,7 +15,7 @@ public class GetText {
     WebDriver driver;
     String baseUrl;
 
-    @Before
+    @BeforeClass
     public void setUp() throws Exception {
         System.setProperty("webdriver.chrome.driver", "D:\\Java Practice\\Test1\\Maven1\\chromedriver.exe");
         driver = new ChromeDriver();
@@ -36,7 +36,7 @@ public class GetText {
         System.out.println("Trext on element is " + elementText.isEmpty());
     }
 
-    @After
+    @AfterClass
     public void tearDown() throws Exception {
         System.out.println("After");
         driver.quit();
