@@ -1,10 +1,8 @@
 package test;
 
-import org.junit.After;
-import org.junit.AfterClass;
-import org.junit.Before;
-import org.junit.BeforeClass;
-import org.junit.Test;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Test;
 
 public class Junit {
 
@@ -22,14 +20,14 @@ public class Junit {
 
     }
 
-    @Before
+    @BeforeClass
     public void setUp() throws Exception {
         System.out.println("Before");
 
 
     }
 
-    @After
+    @AfterClass
     public void tearDown() throws Exception {
         System.out.println("After");
     }

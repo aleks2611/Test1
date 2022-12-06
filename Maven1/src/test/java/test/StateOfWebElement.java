@@ -1,12 +1,13 @@
 package test;
 
-import org.junit.After;
-import org.junit.Before;
-import org.junit.Test;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Test;
 
 import java.util.concurrent.TimeUnit;
 
@@ -15,7 +16,7 @@ public class StateOfWebElement {
     static String BaseUrl2;
     static String BaseUrl;
 
-    @Before
+    @BeforeClass
     public void setUp() throws Exception {
         driver = new ChromeDriver();
         System.setProperty("webdriver.chrome.driver", "D:\\Java Practice\\Test1\\Maven1\\chromedriver.exe");
@@ -56,7 +57,7 @@ public class StateOfWebElement {
 
     // }
 
-    @After
+    @AfterClass
     public void tearDown() throws InterruptedException {
         Thread.sleep(2000);
         driver.quit();
