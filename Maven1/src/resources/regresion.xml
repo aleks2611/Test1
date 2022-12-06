@@ -1,0 +1,9 @@
+<suite name=" Regresion Test Suite">
+    <test name="Application test">
+
+        <classes>
+            <class name="testcases.softAsserts"/>
+
+        </classes>
+    </test>
+</suite>
